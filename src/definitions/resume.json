@@ -1,0 +1,310 @@
+{
+    "header": {
+        "fullName": "Malek Miladi",
+        "socials": [
+            {
+                "id": 1,
+                "type": "link",
+                "name": "github",
+                "link": "https://github.com/malekmiladi/",
+                "text": "malekmiladi"
+            },
+            {
+                "id": 2,
+                "type": "link",
+                "name": "linkedin",
+                "link": "https://www.linkedin.com/in/malek-miladi/",
+                "text": "malek-miladi"
+            },
+            {
+                "id": 3,
+                "type": "mail",
+                "mail": "malekmiladi@outlook.com"
+            },
+            {
+                "id": 4,
+                "type": "phone",
+                "countryCode": "216",
+                "phoneNumber": "52 118 861"
+            },
+            {
+                "id": 5,
+                "type": "location",
+                "location": "Tunisia - Tunis"
+            }
+        ]
+    },
+    "about": {
+        "title": "About Me",
+        "content": " Ambitious and interested in technology. Passionate about learning and solving problems through innovative solutions."
+    },
+    "experiences": {
+        "title": "Work Experience",
+        "entries": [
+            {
+                "id": 1,
+                "position": "Software Engineer",
+                "company": {
+                    "name": "Odeev",
+                    "link": "https://www.odeev.com/",
+                    "location": ""
+                },
+                "startDate": {
+                    "month": "Dec",
+                    "year": 2023
+                },
+                "endDate": {
+                    "month": "Aug",
+                    "year": 2024
+                },
+                "responsibilities": [
+                    "Contributed to 5 identity management systems that fall under the United Nations Development Programme.",
+                    "Developed 1 custom editor plugin for VS Code allowing team members to define frontend forms. The output is used by code gen software to produce the corresponding React components, increasing development speed by ~10%.",
+                    "Refactored code gen software to generate REST API Controllers with their input/output and method types.",
+                    "Contributed to code gen software for generating ORM, DTOs, DAOs, generic workflows and frontend forms, views, workflows as well as bash scripts for deployment."
+                ],
+                "skills": {
+                    "title": "Keywords",
+                    "entries": [
+                        "Java",
+                        "JavaScript",
+                        "TypeScript",
+                        "Spring Boot",
+                        "FreeMarker",
+                        "React",
+                        "Bash",
+                        "Linux",
+                        "nginx",
+                        "Keycloak",
+                        "PostgreSQL"
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "position": "DevOps Engineer (Intern)",
+                "company": {
+                    "name": "STMicroelectronics",
+                    "link": "https://www.st.com/",
+                    "location": ""
+                },
+                "startDate": {
+                    "month": "Feb",
+                    "year": 2023
+                },
+                "endDate": {
+                    "month": "July",
+                    "year": 2023
+                },
+                "responsibilities": [
+                    "Engineered a microservices platform to manage embedded devices test farms, enabling resource sharing across teams and reducing manual work by 40%.",
+                    "Built a web client to display embedded device information and state.",
+                    "Built a CLI client for developers to request a device/setup to run tests.",
+                    "Built a manager app that queues device/setup requests, dispatches free resources for requests along with a worker.",
+                    "Built a worker that accepts connections, runs tests, provide real-time logs, sends back log files, and free resources.",
+                    "Integrated the tool in Jenkins jobs for STM32 boards validation test campaigns reducing test wait times by 20%."
+                ],
+                "skills": {
+                    "title": "Keywords",
+                    "entries": [
+                        "DevOps",
+                        "Docker",
+                        "Jenkins",
+                        "Linux",
+                        "Bash",
+                        "Flask",
+                        "Python",
+                        "VueJS",
+                        "PostgreSQL",
+                        "nginx"
+                    ]
+                }
+            },
+            {
+                "id": 3,
+                "position": "DevOps Engineer (Intern)",
+                "company": {
+                    "name": "STMicroelectronics",
+                    "link": "https://www.st.com/",
+                    "location": ""
+                },
+                "startDate": {
+                    "month": "July",
+                    "year": 2022
+                },
+                "endDate": {
+                    "month": "Sep",
+                    "year": 2022
+                },
+                "responsibilities": [
+                    "Built a mechanism for Docker device access without privileged mode, cutting test farm setup time from days to minutes."
+                ],
+                "skills": {
+                    "title": "Keywords",
+                    "entries": [
+                        "DevOps",
+                        "Docker",
+                        "Jenkins",
+                        "Linux",
+                        "Bash"
+                    ]
+                }
+            }
+        ]
+    },
+    "projects": {
+        "title": "Personal Projects",
+        "entries": [
+            {
+                "id": 1,
+                "title": "On-Premise Cloud Solution Implementation",
+                "link": "https://github.com/malekmiladi/on-premise-cloud-implementation",
+                "description": [
+                    "Engineered a 4-microservice platform that provisions Virtual Machines within a private cloud, tailored to user input for custom configurations.",
+                    "Built a vm-manager to manage projects and instances, a vm-orchestrator to find the best host for an instance, a cloud data source from which instances can retrieve their configuration, a compute-node service installed in each host with free resources to create VM instances using libvirt API for interacting with KVM and which use the cloud-init method to fetch user configuration and accept SSH connections.",
+                    "Created REST APIs and configured Kafka message Queue between relevant services."
+                ],
+                "startDate": {
+                    "month": "Nov",
+                    "year": 2023
+                },
+                "endDate": {
+                    "month": "Present",
+                    "year": ""
+                },
+                "skills": {
+                    "title": "Keywords",
+                    "entries": [
+                        "KVM",
+                        "libvirt",
+                        "Microservices",
+                        "Spring Boot",
+                        "PostgreSQL",
+                        "Kafka"
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "title": "Hand-Written Digits Classifier App",
+                "link": "https://github.com/malekmiladi/digit-classifier-app",
+                "description": [
+                    "Built a web app for real-time handwritten digit classification using an L-layer machine learning model made from scratch.",
+                    " Integrated the model into a Flask web server, delivering fast and accurate results in a user-friendly interface."
+                ],
+                "startDate": {
+                    "month": "Oct",
+                    "year": 2022
+                },
+                "skills": {
+                    "title": "Keywords",
+                    "entries": [
+                        "Python",
+                        "Machine Learning",
+                        "Deep Neural Network",
+                        "Hand-Written Digits Classification"
+                    ]
+                }
+            }
+        ]
+    },
+    "education": {
+        "title": "Education",
+        "entries": [
+            {
+                "id": 1,
+                "establishment": "Faculty of Sciences of Tunis",
+                "location": "Tunisia",
+                "diplomas": [
+                    {
+                        "id": 1,
+                        "type": "National Diploma of Engineering",
+                        "field": "Electronics & Embedded Systems",
+                        "startYear": "2020",
+                        "endYear": "2023"
+                    },
+                    {
+                        "id": 2,
+                        "type": "Engineering Preparatory Cycle",
+                        "field": "Mathematics & Physics",
+                        "startYear": "2018",
+                        "endYear": "2020"
+                    }
+                ]
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Programming",
+                "entries": [
+                    "Python",
+                    "Java",
+                    "C",
+                    "Groovy",
+                    "Bash",
+                    "SQL",
+                    "JavaScript",
+                    "TypeScript",
+                    "HTML",
+                    "CSS"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Tools",
+                "entries": [
+                    "Jenkins",
+                    "Docker",
+                    "Git"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Web",
+                "entries": [
+                    "Spring Boot",
+                    "Flask",
+                    "ExpressJS",
+                    "React",
+                    "VueJS",
+                    "Microservices",
+                    "MVC"
+                ]
+            }
+        ]
+    },
+    "languages": {
+        "title": "Languages",
+        "entries": [
+            {
+                "id": 1,
+                "name": "Arabic",
+                "level": "native"
+            },
+            {
+                "id": 2,
+                "name": "French",
+                "level": "bilingual"
+            },
+            {
+                "id": 3,
+                "name": "English",
+                "level": "near native"
+            }
+        ]
+    },
+    "interests": {
+        "title": "Interests",
+        "entries": [
+            "Building cool apps",
+            "Game Dev",
+            "Personal Development",
+            "Chess",
+            "Instrumental Music"
+        ]
+    }
+}
