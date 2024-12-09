@@ -1,21 +1,22 @@
 'use client';
-import { useState } from 'react';
-import { interests } from '@/definitions/resume.json';
 
-function Interests() {
+type InterestsContent = {
+    title: string;
+    entries: string[];
+}
 
-    const [interestsContent,] = useState(interests);
+function Interests({ content }: { content: InterestsContent }) {
 
     return (
-        <section>
+        <section className='mb-4'>
             <h2 className='flex font-semibold'>
-                {interestsContent.title}
+                {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
                     <div className='border-black border-b-2 w-auto'></div>
                 </span>
             </h2>
             <p>
-                {interests.entries.join(', ')}
+                {content.entries.join(', ')}
             </p>
         </section>
     )

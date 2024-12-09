@@ -11,12 +11,10 @@
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
-    }
-}
-
-@media print {
-    .print {
-        display: flexbox;
+        --dark-blue: #222831;
+        --blue: #00ADB5;
+        --gray: #393E46;
+        --light-gray: #EEEEEE;
     }
 }
 
@@ -25,8 +23,11 @@
     margin: 0;
 }
 
+.print {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+}
+
 body {
     color: var(--foreground);
     background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
 }

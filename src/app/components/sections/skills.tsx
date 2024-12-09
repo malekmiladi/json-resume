@@ -1,15 +1,38 @@
 'use client';
-import { useState } from 'react';
-import { skills } from '@/definitions/resume.json';
 
-function Skills() {
+type CategoryData = {
+    id: number;
+    name: string;
+    entries: string[];
+}
 
-    const [skillsContent,] = useState(skills);
+type SkillsContent = {
+    title: string;
+    categories: CategoryData[];
+}
+
+type LanguageEntry = {
+    id: number;
+    name: string;
+    level: string;
+}
+
+type LanguagesContent = {
+    title: string;
+    entries: LanguageEntry[];
+}
+
+function Skills({ content }: { content: { skills: SkillsContent, languages: LanguagesContent } }) {
+
+    const languagesParts: string[] = [];
+    content.languages.entries.forEach((entry) => {
+        languagesParts.push(`${entry.name} (${entry.level})`);
+    })
 
     return (
-        <section>
+        <section className='mb-4'>
             <h2 className='flex font-semibold'>
-                {skillsContent.title}
+                {content.skills.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
                     <div className='border-black border-b-2 w-auto'></div>
                 </span>
@@ -17,7 +40,7 @@ function Skills() {
             <table className="flex flex-col">
                 <tbody>
                     {
-                        skills.categories.map(category =>
+                        content.skills.categories.map(category =>
                             <tr key={"category-" + category.id}>
                                 <td className='font-semibold'>
                                     {category.name}
@@ -27,6 +50,16 @@ function Skills() {
                                 </td>
                             </tr>
                         )
+                    }
+                    {
+                        <tr key={"category-languages"}>
+                            <td className='font-semibold'>
+                                {content.languages.title}
+                            </td>
+                            <td className='pl-10'>
+                                {languagesParts.join(", ")}
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

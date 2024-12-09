@@ -1,19 +1,20 @@
 'use client';
 
-import { about } from "@/definitions/resume.json";
-import { useState } from "react";
+type AboutContent = {
+    title: string;
+    content: string;
+}
 
-function About() {
-    const [aboutContent, setAboutContent] = useState(about);
+function About({ content }: { content: AboutContent }) {
     return (
-        <section>
+        <section className='mb-4'>
             <h2 className='flex font-semibold'>
-                {aboutContent.title}
+                {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
                     <div className='border-black border-b-2 w-auto'></div>
                 </span>
             </h2>
-            {aboutContent.content}
+            {content.content}
         </section>
     )
 }

@@ -1,21 +1,37 @@
 'use client';
 
-import { projects } from '@/definitions/resume.json';
-import { useState } from 'react';
+type ProjectDate = {
+    month: string;
+    year: number;
+}
 
-function Projects() {
-    const [projectsContent,] = useState(projects);
+type ProjectEntry = {
+    id: number;
+    title: string;
+    link: string;
+    description: string[];
+    startDate: ProjectDate;
+    endDate: ProjectDate;
+    skills: { title: string, entries: string[] };
+}
+
+type ProjectsContent = {
+    title: string;
+    entries: ProjectEntry[];
+}
+
+function Projects({ content }: { content: ProjectsContent }) {
     return (
-        <section>
+        <section className='mb-4'>
             <h2 className='flex font-semibold'>
-                {projectsContent.title}
+                {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
                     <div className='border-black border-b-2 w-auto'></div>
                 </span>
             </h2>
             <ol className="flex flex-col">
                 {
-                    projectsContent.entries.map(project =>
+                    content.entries.map((project) =>
                         <li key={"project-" + project.id}>
                             <h3 className="flex left-0 font-semibold justify-between">
                                 <span className="left-0 font-semibold">
@@ -26,14 +42,14 @@ function Projects() {
                                 </span>
                             </h3>
                             <ul className="list-disc list-inside">
-                                {project.description.map((r, i) =>
-                                    <li key={"description-" + i} className='list-disc list-inside'>{r}</li>
+                                {project.description.map((line, i) =>
+                                    <li key={"description-" + i} className='list-disc list-inside'>{line}</li>
                                 )}
                             </ul>
-                            <ol className='flex flex-row'>
-                                <pre className='font-semibold'>{project.skills.title + ': '}</pre>
+                            <p className='flex flex-row whitespace-pre'>
+                                <span className='font-semibold'>{project.skills.title + ': '} </span>
                                 {project.skills.entries.join(", ")}
-                            </ol>
+                            </p>
                         </li>
                     )
                 }
