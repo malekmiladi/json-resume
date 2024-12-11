@@ -27,32 +27,32 @@ function Header({ content }: { content: HeaderContent }) {
             switch (social.type) {
                 case "link":
                     return (
-                        <li key={"social-" + social.id} className="flex items-center w-fit">
-                            <Icon name={social.name!} />
-                            <a className="font-normal m-2" href={social.link} target="_blank" rel="noopener noreferrer">{social.text}</a>
+                        <li key={"social-" + social.id} className="flex items-center w-fit gap-1">
+                            <Icon name={social.name!} classes={"w-5 aspect-square"} />
+                            <a className="font-normal ml-2" href={social.link} target="_blank" rel="noopener noreferrer">{social.text}</a>
                         </li>
                     );
                 case "mail":
                     return (
-                        <li key={"social-" + social.id} className="flex items-center w-fit">
-                            <Icon name={social.type!} />
-                            <a className="font-normal m-2" href={"mailto:" + social.mail} target="_blank" rel="noopener noreferrer">{social.mail}</a>
+                        <li key={"social-" + social.id} className="flex items-center w-fit gap-1">
+                            <Icon name={social.type!} classes={"w-5 aspect-square"} />
+                            <a className="font-normal ml-2" href={"mailto:" + social.mail} target="_blank" rel="noopener noreferrer">{social.mail}</a>
                         </li>
                     );
                 case "phone":
                     const tel = "tel:+" + social.countryCode + social.phoneNumber!.replace(/ /g, '');
                     const text = `(+${social.countryCode}) ${social.phoneNumber}`;
                     return (
-                        <li key={"social-" + social.id} className="flex items-center w-fit">
-                            <Icon name={social.type!} />
-                            <a className="font-normal m-2" href={tel}>{text}</a>
+                        <li key={"social-" + social.id} className="flex items-center w-fit gap-1">
+                            <Icon name={social.type!} classes={"w-5 aspect-square"} />
+                            <a className="font-normal ml-2" href={tel}>{text}</a>
                         </li>
                     );
                 case "location":
                     return (
-                        <li key={"social-" + social.id} className="flex items-center w-fit">
-                            <Icon name={social.type!} />
-                            <p className="font-normal m-2">{social.location}</p>
+                        <li key={"social-" + social.id} className="flex items-center w-fit gap-1">
+                            <Icon name={social.type!} classes={"w-5 aspect-square"} />
+                            <p className="font-normal ml-2">{social.location}</p>
                         </li>
                     );
                 default:
@@ -65,14 +65,14 @@ function Header({ content }: { content: HeaderContent }) {
 
     return (
         content ?
-            <header className="text-center font-extrabold mb-3">
+            <header className="text-center font-extrabold mb-2">
                 <h1 className="text-xl">
                     {content.fullName}
                 </h1>
                 <h2>
                     {content.function}
                 </h2>
-                <ul className="flex justify-center gap-4">
+                <ul className="flex justify-center gap-5">
                     {processSocials(content.socials)}
                 </ul>
             </header> : <></>

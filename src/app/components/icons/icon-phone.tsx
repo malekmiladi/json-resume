@@ -1,6 +1,8 @@
-export default function IconPhone() {
+'use client';
+
+export default function IconPhone({ classes }: { classes: string }) {
     return (
-        <svg className="w-5" fill="#000000" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+        <svg className={classes} fill="#000000" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
             <g strokeWidth="0"></g>
             <g strokeLinecap="round" strokeLinejoin="round"></g>
             <g>

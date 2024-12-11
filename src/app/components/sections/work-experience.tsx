@@ -29,7 +29,7 @@ type ExperiencesContent = {
 function Experience({ content }: { content: ExperiencesContent }) {
 
     return (
-        <section className='mb-4'>
+        <section className='mb-2'>
             <h2 className='flex font-semibold'>
                 {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
@@ -42,7 +42,7 @@ function Experience({ content }: { content: ExperiencesContent }) {
                         <li key={"experience-" + experienceEntry.id}>
                             <h3 className="flex left-0 font-semibold justify-between">
                                 <span className="left-0 font-semibold">
-                                    {experienceEntry.position} @<span><a href={experienceEntry.company.link} target="_blank" rel="noopener noreferrer">{experienceEntry.company.name}</a></span>
+                                    {experienceEntry.position} at <span><a href={experienceEntry.company.link} target="_blank" rel="noopener noreferrer">{experienceEntry.company.name}</a></span>
                                 </span>
                                 <span className="font-semibold">
                                     {experienceEntry.startDate.month + ' ' + experienceEntry.startDate.year} {experienceEntry.endDate ? (' - ' + experienceEntry.endDate.month + (experienceEntry.endDate.year ? ' ' + experienceEntry.endDate.year : '')) : ""}

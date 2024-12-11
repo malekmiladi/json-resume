@@ -6,18 +6,18 @@ import IconLocation from "./icons/icon-location";
 import IconMail from "./icons/icon-mail";
 import IconPhone from "./icons/icon-phone";
 
-function Icon({ name }: { name: string }) {
+function Icon({ name, classes }: { name: string, classes: string }) {
     switch (name) {
         case "github":
-            return <IconGithub />;
+            return <IconGithub classes={classes} />;
         case "linkedin":
-            return <IconLinkedin />;
+            return <IconLinkedin classes={classes} />;
         case "mail":
-            return <IconMail />;
+            return <IconMail classes={classes} />;
         case "phone":
-            return <IconPhone />
+            return <IconPhone classes={classes} />
         case "location":
-            return <IconLocation />
+            return <IconLocation classes={classes} />
     }
 }
 

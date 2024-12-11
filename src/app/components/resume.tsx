@@ -12,6 +12,7 @@ import Skills from '@/components/sections/skills';
 import Interests from '@/components/sections/interests';
 
 function Resume({ content, printContent }: { content: any, printContent: RefObject<HTMLDivElement | null> }) {
+
     return (
         <A4Paper ref={printContent}>
             {content.header && <Header content={content.header} />}

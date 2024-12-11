@@ -30,7 +30,7 @@ function Skills({ content }: { content: { skills: SkillsContent, languages: Lang
     })
 
     return (
-        <section className='mb-4'>
+        <section className='mb-2'>
             <h2 className='flex font-semibold'>
                 {content.skills.title}
                 <span className='flex-grow items-end pt-4 ml-2'>

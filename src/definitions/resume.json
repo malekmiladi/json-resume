@@ -1,7 +1,7 @@
 {
     "header": {
         "fullName": "Malek Miladi",
-        "function": "Software Engineer",
+        "function": "QA Engineer",
         "socials": [
             {
                 "id": 1,
@@ -37,7 +37,7 @@
     },
     "about": {
         "title": "About Me",
-        "content": " Ambitious and interested in technology. Passionate about learning and solving problems through innovative solutions."
+        "content": "Ambitious with great interest in technology. Avid learner and passionate about problem solving with innovative solutions."
     },
     "experiences": {
         "title": "Work Experience",
@@ -59,25 +59,25 @@
                     "year": 2024
                 },
                 "responsibilities": [
-                    "Contributed to 5 identity management systems that fall under the United Nations Development Programme.",
-                    "Developed 1 custom editor plugin for VS Code allowing team members to define frontend forms. The output is used by code gen software to produce the corresponding React components, increasing development speed by ~10%.",
-                    "Refactored code gen software to generate REST API Controllers with their input/output and method types.",
-                    "Contributed to code gen software for generating ORM, DTOs, DAOs, generic workflows and frontend forms, views, workflows as well as bash scripts for deployment."
+                    "Collaborated on 5 identity management systems that fall under the United Nations Development Programme.",
+                    "Contributed to code generation software for generating project tailored ORM, DTOs, DAOs, workflows, frontend forms and views as well as bash scripts for automating deployment.",
+                    "Developed 1 custom editor plugin for VS Code allowing team members to define frontend forms. The output is used to generate React components, increasing development speed by ~10%.",
+                    "Refactored code generation software to generate REST API Controllers with their input/output and method types."
                 ],
                 "skills": {
                     "title": "Keywords",
                     "entries": [
                         "Java",
+                        "FreeMarker",
+                        "Spring Boot",
+                        "PostgreSQL",
+                        "Keycloak",
                         "JavaScript",
                         "TypeScript",
-                        "Spring Boot",
-                        "FreeMarker",
                         "React",
                         "Bash",
                         "Linux",
-                        "nginx",
-                        "Keycloak",
-                        "PostgreSQL"
+                        "nginx"
                     ]
                 }
             },
@@ -98,12 +98,13 @@
                     "year": 2023
                 },
                 "responsibilities": [
-                    "Engineered a microservices platform to manage embedded devices test farms, enabling resource sharing across teams and reducing manual work by 40%.",
-                    "Built a web client to display embedded device information and state.",
-                    "Built a CLI client for developers to request a device/setup to run tests.",
-                    "Built a manager app that queues device/setup requests, dispatches free resources for requests along with a worker.",
-                    "Built a worker that accepts connections, runs tests, provide real-time logs, sends back log files, and free resources.",
-                    "Integrated the tool in Jenkins jobs for STM32 boards validation test campaigns reducing test wait times by 20%."
+                    "Engineered a microservices platform to manage embedded devices test farms, enabling remote resource sharing across international locations and reducing logistics by 60%",
+                    "Implemented event-based WebSocket messaging between a Python CLI client and a remote Flask worker for queueing up real-time tests on embedded devices.",
+                    "Built a frontend web client to display devices, their states and location.",
+                    "Implemented a Queue System (FIFO) for dispatching resources matching filters along with their corresponding worker information for automated tests.",
+                    "Interfaced with the company's LDAP server leveraging a centralized authentication method.",
+                    "Built a worker installed on test farm machines and that runs tests, provides real-time logs and sends back log files.",
+                    "Integrated the tool in Jenkins jobs for STM32 boards validation test campaigns, improving coordination between teams and wait times by 20%."
                 ],
                 "skills": {
                     "title": "Keywords",
@@ -115,9 +116,8 @@
                         "Bash",
                         "Flask",
                         "Python",
-                        "VueJS",
                         "PostgreSQL",
-                        "nginx"
+                        "VueJS"
                     ]
                 }
             },
@@ -161,9 +161,9 @@
                 "title": "On-Premise Cloud Solution Implementation",
                 "link": "https://github.com/malekmiladi/on-premise-cloud-implementation",
                 "description": [
-                    "Engineered a 4-microservice platform that provisions Virtual Machines within a private cloud, tailored to user input for custom configurations.",
-                    "Built a vm-manager to manage projects and instances, a vm-orchestrator to find the best host for an instance, a cloud data source from which instances can retrieve their configuration, a compute-node service installed in each host with free resources to create VM instances using libvirt API for interacting with KVM and which use the cloud-init method to fetch user configuration and accept SSH connections.",
-                    "Created REST APIs and configured Kafka message Queue between relevant services."
+                    "Engineered a scalable 4-microservices platform for provisioning virtual machines within a private cloud, tailored to user input for custom configurations.",
+                    "Implemented the workflow for getting user input via REST API, searching a database for a machine that meets the requirements, dispatching work using Messgae Queues, and controlling VM state using gRPC.",
+                    "Leveraged the cloud-init mechanism by creating a cloud datasource web application to store instances config, and instructing VM instances on how to fetch their configuration on first boot."
                 ],
                 "startDate": {
                     "month": "Nov",
@@ -190,8 +190,8 @@
                 "title": "Hand-Written Digits Classifier App",
                 "link": "https://github.com/malekmiladi/digit-classifier-app",
                 "description": [
-                    "Built a web app for real-time handwritten digit classification using an L-layer machine learning model made from scratch.",
-                    " Integrated the model into a Flask web server, delivering fast and accurate results in a user-friendly interface."
+                    "Built a web app for real-time handwritten digit classification using an L-layer machine learning model made from scratch using Python and the numpy library for optimized math operations.",
+                    "Integrated the model in a Flask web server, delivering fast and accurate results in a user-friendly interface."
                 ],
                 "startDate": {
                     "month": "Oct",
@@ -201,6 +201,7 @@
                     "title": "Keywords",
                     "entries": [
                         "Python",
+                        "numpy",
                         "Machine Learning",
                         "Deep Neural Network",
                         "Hand-Written Digits Classification"

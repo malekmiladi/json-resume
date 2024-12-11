@@ -1,6 +1,8 @@
-export default function IconLocation() {
+'use client';
+
+export default function IconLocation({ classes }: { classes: string }) {
     return (
-        <svg className="w-5" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" fill="#000000">
+        <svg className={classes} version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" fill="#000000">
             <g strokeWidth="0"></g>
             <g strokeLinecap="round" strokeLinejoin="round"></g>
             <g>

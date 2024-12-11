@@ -1,6 +1,8 @@
-export default function IconLinkedin() {
+'use client';
+
+export default function IconLinkedin({ classes }: { classes: string }) {
     return (
-        <svg className="w-5" fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512">
+        <svg className={classes} fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512">
             <g strokeWidth="0"></g>
             <g strokeLinecap="round" strokeLinejoin="round"></g>
             <g>

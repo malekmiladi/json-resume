@@ -1,6 +1,8 @@
-export default function IconMail() {
+'use client';
+
+export default function IconMail({ classes }: { classes: string }) {
     return (
-        <svg className="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={classes} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g strokeWidth="0"></g>
             <g strokeLinecap="round" strokeLinejoin="round"></g>
             <g>
