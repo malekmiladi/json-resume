@@ -7,7 +7,7 @@ type AboutContent = {
 
 function About({ content }: { content: AboutContent }) {
     return (
-        <section className='mb-2'>
+        <section className='mb-1'>
             <h2 className='flex font-semibold'>
                 {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>

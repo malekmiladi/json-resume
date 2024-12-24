@@ -13,6 +13,7 @@ type CompanyData = {
 
 type ExperienceEntry = {
     id: number;
+    display: boolean;
     position: string;
     company: CompanyData;
     startDate: ExperienceData;
@@ -29,7 +30,7 @@ type ExperiencesContent = {
 function Experience({ content }: { content: ExperiencesContent }) {
 
     return (
-        <section className='mb-2'>
+        <section className='mb-1'>
             <h2 className='flex font-semibold'>
                 {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
@@ -38,7 +39,7 @@ function Experience({ content }: { content: ExperiencesContent }) {
             </h2>
             <ol className="flex flex-col">
                 {
-                    content.entries.map((experienceEntry) =>
+                    content.entries.map((experienceEntry) => experienceEntry.display &&
                         <li key={"experience-" + experienceEntry.id}>
                             <h3 className="flex left-0 font-semibold justify-between">
                                 <span className="left-0 font-semibold">
@@ -55,7 +56,7 @@ function Experience({ content }: { content: ExperiencesContent }) {
                             </ul>
                             <p className='flex flex-row whitespace-pre'>
                                 <span className='font-semibold'>{experienceEntry.skills.title + ':'} </span>
-                                {experienceEntry.skills.entries.join(", ")}
+                                {experienceEntry.skills.entries.join(", ")}.
                             </p>
                         </li>
                     )

@@ -65,7 +65,7 @@ function Header({ content }: { content: HeaderContent }) {
 
     return (
         content ?
-            <header className="text-center font-extrabold mb-2">
+            <header className="text-center font-extrabold mb-1">
                 <h1 className="text-xl">
                     {content.fullName}
                 </h1>

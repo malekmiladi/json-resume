@@ -9,6 +9,7 @@ type ProjectDate = {
 
 type ProjectEntry = {
     id: number;
+    display: boolean;
     title: string;
     link: string;
     description: string[];
@@ -24,7 +25,7 @@ type ProjectsContent = {
 
 function Projects({ content }: { content: ProjectsContent }) {
     return (
-        <section className='mb-2'>
+        <section className='mb-1'>
             <h2 className='flex font-semibold'>
                 {content.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
@@ -33,11 +34,11 @@ function Projects({ content }: { content: ProjectsContent }) {
             </h2>
             <ol className="flex flex-col">
                 {
-                    content.entries.map((project) =>
+                    content.entries.map((project) => project.display &&
                         <li key={"project-" + project.id}>
                             <h3 className="flex left-0 font-semibold justify-between w">
                                 <span className="left-0 font-semibold flex gap-2">
-                                    {project.title} <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-4 aspect-square flex items-center"><Icon name={"github"} classes={"w-4 aspect-square"} /></a>
+                                    {project.title} {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-4 aspect-square flex items-center"><Icon name={"github"} classes={"w-4 aspect-square"} /></a>}
                                 </span>
                                 <span className="font-semibold">
                                     {project.startDate.month + ' ' + project.startDate.year} {project.endDate ? (' - ' + project.endDate.month + (project.endDate.year ? ' ' + project.endDate.year : '')) : ""}
@@ -50,7 +51,7 @@ function Projects({ content }: { content: ProjectsContent }) {
                             </ul>
                             <p className='flex flex-row whitespace-pre'>
                                 <span className='font-semibold'>{project.skills.title + ': '} </span>
-                                {project.skills.entries.join(", ")}
+                                {project.skills.entries.join(", ")}.
                             </p>
                         </li>
                     )

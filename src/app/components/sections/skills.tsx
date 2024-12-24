@@ -2,6 +2,7 @@
 
 type CategoryData = {
     id: number;
+    display: boolean;
     name: string;
     entries: string[];
 }
@@ -30,39 +31,37 @@ function Skills({ content }: { content: { skills: SkillsContent, languages: Lang
     })
 
     return (
-        <section className='mb-2'>
+        <section className='mb-1'>
             <h2 className='flex font-semibold'>
                 {content.skills.title}
                 <span className='flex-grow items-end pt-4 ml-2'>
                     <div className='border-black border-b-2 w-auto'></div>
                 </span>
             </h2>
-            <table className="flex flex-col">
-                <tbody>
-                    {
-                        content.skills.categories.map(category =>
-                            <tr key={"category-" + category.id}>
-                                <td className='font-semibold'>
-                                    {category.name}
-                                </td>
-                                <td className='pl-10'>
-                                    {category.entries.join(", ")}
-                                </td>
-                            </tr>
-                        )
-                    }
-                    {
-                        <tr key={"category-languages"}>
-                            <td className='font-semibold'>
-                                {content.languages.title}
-                            </td>
-                            <td className='pl-10'>
-                                {languagesParts.join(", ")}
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <ul className="flex flex-col">
+                {
+                    content.skills.categories.map(category => category.display &&
+                        <li key={"category-" + category.id}>
+                            <p>
+                                <span className='font-semibold pr-2 text-pre'>
+                                    {category.name}:
+                                </span>
+                                {category.entries.join(", ")}.
+                            </p>
+                        </li>
+                    )
+                }
+                {
+                    <li key={"category-languages"}>
+                        <p>
+                            <span className='font-semibold pr-2'>
+                                {content.languages.title}:
+                            </span>
+                            {languagesParts.join(", ")}.
+                        </p>
+                    </li>
+                }
+            </ul>
         </section>
     )
 }
